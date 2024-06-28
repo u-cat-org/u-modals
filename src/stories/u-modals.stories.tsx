@@ -27,7 +27,9 @@ function WrapperComponent() {
   const { showModal } = useModals();
 
   function onButtonClickHandler() {
-    showModal('Title', 'Body');
+    showModal(
+      'Title', <UButton onClick={ onButtonClickHandler }>Show modal</UButton>
+    );
   }
 
   return (

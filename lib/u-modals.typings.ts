@@ -1,20 +1,27 @@
 // Provider
+import React from 'react';
+
+
+export type TModalBody = string | React.ReactNode;
+
+
 export interface IUModalContext {
-  showModal: (header: string, body: string) => Promise<boolean>;
+  showModal: (header: string, body: TModalBody) => Promise<boolean>;
 }
+
 
 export type TResolveFunc = (result: boolean) => boolean
 
 
 export interface IModalConfig {
   header: string;
-  body: string;
+  body: TModalBody;
   resolveFunc: TResolveFunc
 }
 
 
 export interface IUModalProps {
   header: string;
-  body: string;
+  body: TModalBody;
   onClose?: (result: boolean) => void;
 }
