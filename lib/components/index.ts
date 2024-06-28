@@ -1,1 +1,1 @@
-// TODO. Implement u-modals components and export them from here
+export * from './UModal.tsx';
