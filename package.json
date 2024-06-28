@@ -75,6 +75,7 @@
     "**/*.css"
   ],
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "reactstrap": "^9.2.2"
   }
 }
