@@ -4,7 +4,7 @@ import React, {
   useState
 } from 'react';
 import { UModal } from '../components';
-import { IModalConfig, IUModalContext, TResolveFunc } from '../u-modals.typings.ts';
+import { IModalConfig, IUModalContext, TModalBody, TResolveFunc } from '../u-modals.typings.ts';
 
 
 const DEFAULT_U_MODAL_CONTEXT: IUModalContext = {
@@ -20,7 +20,7 @@ export const useModals = () => {
 export const UModalProvider = ({ children }: React.PropsWithChildren) => {
   const [ modals, setModals ] = useState<IModalConfig[]>([]);
 
-  function showModal(header: string, body: string): Promise<boolean> {
+  function showModal(header: string, body: TModalBody): Promise<boolean> {
     let resolveFunc: TResolveFunc;
 
     const promise = new Promise<boolean>((resolve) => {
